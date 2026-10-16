@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PDF Toolkit</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M6 2h8l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/><path d="M14 2v5h5"/><path d="M8 13h8M8 17h5"/></svg>
+      </div>
+      <div>
+        <div class="brand-name">PDF Toolkit</div>
+        <div class="brand-sub">Offline file tools</div>
+      </div>
+    </div>
+
+    <nav id="nav" aria-label="Tools"></nav>
+
+    <div class="sidebar-foot">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+      <span>Works offline. Your files never leave this computer.</span>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="tool-head">
+      <h1 id="tool-title"></h1>
+      <p id="tool-desc"></p>
+    </header>
+
+    <!-- Empty state -->
+    <section id="empty" class="dropzone" tabindex="0" role="button">
+      <div class="dz-icon" id="dz-icon" aria-hidden="true"></div>
+      <div class="dz-title" id="dz-title"></div>
+      <div class="dz-or">or</div>
+      <button class="btn primary lg" id="dz-browse" type="button">Select files</button>
+      <div class="dz-hint" id="dz-hint"></div>
+    </section>
+
+    <!-- Files + options -->
+    <section id="workspace" class="workspace" hidden>
+      <div class="files-col">
+        <div class="files-bar">
+          <span id="files-count"></span>
+          <div class="files-actions">
+            <button class="btn ghost sm" id="sort-az" type="button" title="Sort by name">Sort A–Z</button>
+            <button class="btn ghost sm" id="reverse" type="button" title="Reverse order">Reverse</button>
+            <button class="btn ghost sm" id="clear" type="button">Clear all</button>
+          </div>
+        </div>
+        <div class="file-grid" id="file-grid"></div>
+        <p class="order-hint" id="order-hint">Drag cards to change the order.</p>
+      </div>
+
+      <aside class="options">
+        <div class="options-scroll">
+        <div class="options-body" id="options"></div>
+
+        <div class="opt-group">
+          <div class="opt-label">Save to</div>
+          <div class="outdir">
+            <span class="outdir-path" id="outdir-path">Same folder as the original</span>
+            <div class="outdir-btns">
+              <button class="btn ghost sm" id="outdir-change" type="button">Change</button>
+              <button class="btn ghost sm" id="outdir-reset" type="button" hidden>Reset</button>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <div class="run-area">
+          <div class="progress" id="progress" hidden>
+            <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+            <div class="progress-row">
+              <span class="progress-msg" id="progress-msg">Working…</span>
+              <button class="btn ghost sm" id="cancel" type="button">Cancel</button>
+            </div>
+          </div>
+          <button class="btn primary lg block" id="run" type="button"></button>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Results -->
+    <section id="results" class="results" hidden>
+      <div class="results-card">
+        <div class="results-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+        </div>
+        <h2 id="results-title"></h2>
+        <p id="results-summary" class="results-summary"></p>
+        <div class="results-actions">
+          <button class="btn primary lg" id="open-folder" type="button">Open folder</button>
+          <button class="btn lg" id="back" type="button">Back to files</button>
+          <button class="btn ghost lg" id="restart" type="button">Start over</button>
+        </div>
+        <ul class="results-list" id="results-list"></ul>
+      </div>
+    </section>
+
+    <div class="drop-overlay" id="drop-overlay" hidden>
+      <div class="drop-overlay-inner">Drop to add files</div>
+    </div>
+  </main>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

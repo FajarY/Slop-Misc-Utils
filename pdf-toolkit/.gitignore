@@ -1,0 +1,28 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# PyInstaller output (attach the .exe to a GitHub Release instead of committing it)
+build/
+dist/
+*.spec
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.swp
+
+# OS clutter
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Local secrets and logs
+.env
+*.log

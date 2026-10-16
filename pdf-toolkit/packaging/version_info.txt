@@ -1,0 +1,27 @@
+# PyInstaller version resource: shows up under the .exe's Properties > Details.
+VSVersionInfo(
+  ffi=FixedFileInfo(
+    filevers=(1, 0, 0, 0),
+    prodvers=(1, 0, 0, 0),
+    mask=0x3f,
+    flags=0x0,
+    OS=0x40004,
+    fileType=0x1,
+    subtype=0x0,
+    date=(0, 0)
+  ),
+  kids=[
+    StringFileInfo([
+      StringTable('040904B0', [
+        StringStruct('FileDescription', 'PDF Toolkit - offline PDF and image tools'),
+        StringStruct('FileVersion', '1.0.0'),
+        StringStruct('InternalName', 'PDF Toolkit'),
+        StringStruct('OriginalFilename', 'PDF Toolkit.exe'),
+        StringStruct('ProductName', 'PDF Toolkit'),
+        StringStruct('ProductVersion', '1.0.0'),
+        StringStruct('LegalCopyright', 'Licensed under AGPL-3.0')
+      ])
+    ]),
+    VarFileInfo([VarStruct('Translation', [1033, 1200])])
+  ]
+)
