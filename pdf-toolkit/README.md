@@ -3,6 +3,8 @@
 A small, fully offline Windows app for everyday PDF and image chores. Nothing is
 uploaded anywhere: every file is processed on your own computer.
 
+![PDF Toolkit compressing three PDFs](docs/screenshots/compress-pdf.png)
+
 | Tool | What it does |
 | --- | --- |
 | **Compress PDF** | Shrinks the images inside a PDF. Three levels: Light (150 dpi), Recommended (120 dpi), Extreme (72 dpi), plus optional grayscale. |
@@ -14,6 +16,15 @@ uploaded anywhere: every file is processed on your own computer.
 You can drag files or whole folders onto the window, or click **Select files**.
 Results are saved next to the originals by default (for example
 `report_compressed.pdf`); existing files are never overwritten.
+
+## Screenshots
+
+| | |
+| --- | --- |
+| ![Compression results showing the size saved for each file](docs/screenshots/compress-pdf-done.png) | ![Merge PDF with numbered, reorderable files](docs/screenshots/merge-pdf.png) |
+| **Results:** see how much space each file saved | **Merge PDF:** drag cards to set the order |
+| ![Images to PDF with page size and margin options](docs/screenshots/images-to-pdf.png) | ![Compress Images in dark mode](docs/screenshots/compress-images-dark.png) |
+| **Images to PDF:** A4, Letter or fit-to-image pages | **Dark mode:** follows your Windows theme |
 
 ## Download and run
 
@@ -57,6 +68,7 @@ app/
   ui/          HTML, CSS and JS for the interface (no external resources)
 tests/         unit tests for ops.py
 scripts/       make_icon.py regenerates assets/icon.ico
+docs/          README screenshots
 packaging/     Windows version info embedded in the exe
 build.ps1      one-step build with PyInstaller
 ```
